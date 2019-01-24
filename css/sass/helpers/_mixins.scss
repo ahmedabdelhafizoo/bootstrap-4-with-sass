@@ -1,0 +1,21 @@
+@mixin prifixer($prop, $value, $prifixes) {
+    @each $prifix in $prifixes {
+        -#{$prifix}-#{$prop}: $value;
+    }
+    #{$prop}: $value;
+}
+@mixin maxExScreen {
+    @media (max-width: 575.98px) {
+        @content;
+    }
+}
+@mixin maxMdScreen {
+    @media (max-width: 991.98px) {
+        @content;
+    }
+}
+@mixin maxLgScreen {
+    @media (max-width: 1199.98px) {
+        @content;
+    }
+}

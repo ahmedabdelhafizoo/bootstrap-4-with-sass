@@ -1,0 +1,55 @@
+// globale style
+html {
+    font-size: 62.5%; //10px
+    @include maxExScreen {
+        font-size: 55%;
+    }
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+    img {
+        max-width: 100%;
+    }
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+//page loading
+.page-loading {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background: $whiteColor;
+    z-index: 999;
+}
+.spinner {
+    width: 5rem;
+    height: 5rem;
+    position: relative;
+    margin: 100px auto;
+  }
+  
+  .double-bounce1{
+      @extend %overlay;
+    border-radius: 50%;
+    background-color: $mainColor;
+    animation: sk-bounce 1.5s infinite ease;
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0);
+    } 50% { 
+      transform: scale(1);
+    }
+  }
+  //animated sections
+  .animated {
+      opacity: 0;
+  }
+  .section, footer {
+      overflow: hidden;
+  }

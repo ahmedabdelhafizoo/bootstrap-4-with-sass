@@ -1,0 +1,191 @@
+// main section
+.main-section {
+    background: linear-gradient(rgba($blackColor, .6)), url("../../../images/blog-images/asset17.jpeg") top;
+    height: 90vh;
+    color: $whiteColor;
+    background-size: cover;
+
+    .title {
+        font-size: 5rem;
+    }
+}
+
+// blog-content
+.blog-content {
+    padding: $defaultPadding;
+
+    .article {
+        @extend %m-b-4;
+
+        &-title {
+            font-size: 2.6rem;
+            margin: 2rem 0;
+        }
+
+        .text-large {
+            font-size: 1.7rem;
+            margin: 2.5rem 0;
+
+            &.dark-bg {
+                background: $darkColor;
+                color: $lightGrayColor;
+                padding: 3rem;
+
+                span {
+                    margin: 2rem;
+                }
+            }
+        }
+
+        &-info {
+            img {
+                margin-top: 2.5rem;
+            }
+
+            .social-tags {
+                margin-bottom: 2rem;
+                text-align: right;
+
+                @include maxMdScreen {
+                    text-align: left;
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        &-comments {
+            border-top: 1px solid $lightGrayColor;
+            padding-top: 4rem;
+
+            .comment {
+                margin: 3rem 0;
+
+                &.admin {
+                    background: rgba($grayColor, .1);
+                    padding: 2.5rem;
+                }
+
+                &-owner {
+                    font-size: 1.6rem;
+                }
+
+                .time {
+                    font-size: 1.2rem;
+                    color: $grayColor;
+                }
+            }
+        }
+    }
+
+    .heading {
+        text-align: inherit;
+
+        &-text {
+
+            &::before,
+            &::after {
+                left: auto;
+                @extend %scale-1;
+            }
+        }
+    }
+
+    .sidbar {
+        border: 1px solid rgba($grayColor, .1);
+        background: rgba($lightGrayColor, .1);
+        padding: 2rem 4rem;
+
+        @include maxLgScreen {
+            padding: 2rem 1rem;
+        }
+
+        .heading {
+            margin: 3rem 0;
+
+            &-text {
+                font-size: 1.8rem;
+            }
+        }
+
+        .search {
+            input {
+                border: 1px solid $lightGrayColor;
+                border-right: none;
+                background: none;
+                margin: 0;
+            }
+
+            button {
+                font-size: 1.5rem;
+                cursor: pointer;
+                background: none;
+                border: 1px solid #bcbcbc;
+                border-left: none;
+                padding: 1rem;
+            }
+        }
+
+        .categories {
+            ul {
+                li {
+                    a {
+                        padding: .5rem 0;
+                        display: inline-block;
+                        @extend %defaultTransition;
+
+                        &:hover {
+                            color: $mainColor;
+                        }
+                    }
+                }
+            }
+        }
+
+        .posts {
+            .comment {
+                margin-bottom: 3rem;
+                .image,
+                .info {
+                    padding: 0;
+                }
+            }
+        }
+
+        .tags {
+            .list-unstyled {
+                li {
+                    display: inline-block;
+
+                    a {
+                        padding: .5rem 1.5rem;
+                        display: inline-block;
+                        border: 1px solid #bcbcbc;
+                        border-radius: 2rem;
+                        margin: 1rem .3rem;
+                        @extend %defaultTransition;
+
+                        &:hover {
+                            color: $whiteColor;
+                            background: $mainColor;
+                            border-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+
+        .instagram {
+            .images {
+                a {
+                    padding: 0;
+                    margin-bottom: 2rem;
+                    @extend %defaultTransition;
+
+                    &:hover {
+                        opacity: .6;
+                    }
+                }
+            }
+        }
+    }
+}

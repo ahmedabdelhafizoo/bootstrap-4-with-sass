@@ -1,0 +1,678 @@
+// main slider
+#mainSlider [data-animation-in] {
+    opacity: 0;
+}
+
+// slider section
+.slider-section {
+    clip-path: polygon(50% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        color: $whiteColor;
+        background: black;
+        padding: 15px;
+        cursor: pointer;
+        z-index: 5;
+        transform: translateY(-50%);
+        font-size: 3rem;
+        @extend %defaultTransition;
+        opacity: .5;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.next-arrow {
+            right: 1rem;
+        }
+
+        &.pev-arrow {
+            left: 1rem;
+        }
+    }
+
+    .slider-item {
+        height: 100vh;
+        background-size: cover;
+        background-position: top;
+        color: $whiteColor;
+
+        &.item-1 {
+            background-image: url(../../../images/slider/asset50.jpeg);
+        }
+
+        &.item-2 {
+            background-image: url(../../../images/slider/asset51.jpeg);
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 8rem;
+
+            h2 {
+                line-height: 1.1;
+                font-weight: 900;
+                font-size: 1em;
+
+                @include maxLgScreen {
+                    font-size: .7em;
+                }
+
+                @include maxMdScreen {
+                    font-size: .6em
+                }
+
+                @include maxExScreen {
+                    font-size: .5em;
+                }
+
+                span {
+                    &:last-of-type {
+                        font-size: 1.9em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// features section
+.features {
+    color: $darkColor;
+    @extend %alternative-padding;
+
+    .title {
+        font-size: 4.4rem;
+
+        @include maxExScreen {
+            font-size: 3rem;
+        }
+
+        font-weight: 900;
+        @extend %m-b-4;
+        span {
+            color: $mainColor;
+        }
+    }
+
+    .text-large {
+        @extend %m-b-4;
+    }
+
+    .feat {
+        @extend %after-image;
+        &::after {
+            background: url("../../../images/2.png") no-repeat !important;
+        }
+        @extend %m-b-4;
+
+        &-icon {
+            i {
+                @extend %defaultTransition;
+            }
+
+            border: 1px solid rgba($darkColor, .2);
+            border-radius: 50%;
+            font-size: 3rem;
+            display: inline-block;
+            position: relative;
+            color: rgba($darkColor, .5);
+            width: 8rem;
+            height: 8rem;
+            line-height: 8rem;
+            margin-bottom: 1.4rem;
+
+            &::before {
+                content: "";
+                @extend %overlay;
+                border-radius: 50%;
+                background: $whiteColor;
+
+                transform: scale(1.3);
+                z-index: -1;
+                @extend %defaultTransition;
+            }
+        }
+
+        &-title {
+            font-size: 1.8rem;
+        }
+
+        &:hover {
+            .feat-icon {
+                color: $whiteColor;
+            }
+
+            .feat-icon::before {
+                @extend %scale-1;
+                background: $mainColor;
+            }
+        }
+    }
+}
+
+// about us section
+.about-us {
+    background: $darkColor;
+    @extend %alternative-padding;
+
+    .cover {
+        .image {
+            @extend %m-b-4;
+
+            position: relative !important;
+
+            &:last-of-type {
+                margin-left: auto;
+            }
+
+            &:last-of-type::before {
+                content: "";
+                @extend %overlay;
+                display: block;
+                background: rgba($darkColor, .5);
+            }
+
+            a {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-size: 5rem;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+                color: #fff;
+            }
+        }
+    }
+
+    .heading-text-white {
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+
+    .text-large {
+        color: $lightGrayColor;
+        margin: 2rem 0 4rem;
+    }
+
+    .popup-youtube {
+        &:hover {
+            color: $whiteColor;
+        }
+    }
+}
+
+// services section
+.services {
+    @extend %alternative-padding;
+
+    .service {
+        &-one {
+            background-image: url("../../../images/sevices/asset\ 52.jpeg");
+        }
+
+        &-two {
+            background-image: url("../../../images/sevices/asset\ 53.jpeg");
+        }
+
+        &-three {
+            background-image: url("../../../images/sevices/asset\ 54.jpeg");
+        }
+
+        background-size: cover;
+
+        @extend %m-b-4;
+
+        .info {
+            border: 1px solid rgba($darkColor, .2);
+            padding: 6rem 3rem;
+            background-color: $whiteColor;
+            @extend %defaultTransition;
+
+            &:hover {
+                background: rgba($mainColor, .8);
+
+                i,
+                .text-normal,
+                .service-title {
+                    color: #fff !important;
+                }
+            }
+
+            i {
+                font-size: 4rem;
+                color: rgba($darkColor, .5);
+            }
+
+            .service-title {
+                font-size: 1.8rem;
+                margin: 2rem 0;
+            }
+        }
+    }
+}
+
+// testimonials section
+.testimonials {
+    @extend %default-padding;
+    background-image: linear-gradient(rgba($blackColor, .7)), url("../../../images/testimonials/asset\ 55.jpeg");
+    background-size: cover;
+
+    &-slider {
+        color: #fff;
+        .slider-item {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: normal;
+            cursor: move;
+            font-size: 2.5rem;
+
+            h2 {
+                font-size: 1em;
+            }
+
+            i {
+                font-size: 1.3em;
+                margin: .5rem 0;
+            }
+
+            h3 {
+                font-size: .8em;
+
+            }
+
+            p {
+                font-size: 1.8rem;
+            }
+        }
+
+        .slick-dots {
+            @extend .list-unstyled;
+            li {
+                button {
+                    display: none;
+                }
+
+                background: #fff;
+                padding: .7rem;
+                cursor: pointer;
+                margin: .5rem;
+                border-radius: 50%;
+                @extend %defaultTransition;
+                display: inline-block;
+            }
+
+            li.slick-active {
+                background: $mainColor;
+                transform: scale(1.3);
+            }
+        }
+    }
+}
+
+// work section
+//**********magnific-popup style**************
+/* overlay at start */
+.mfp-fade.mfp-bg, .mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    @extend %scale-0;
+}
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+    @extend %scale-1;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+    transition: all 0.5s ease-out;
+}
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+    @extend %scale-1;
+}
+
+.portfolio {
+    @extend %default-padding;
+
+    .filter-buttons {
+        button {
+            border: none;
+            background: none;
+            padding: 0;
+            outline: none;
+            font-size: 1.3rem;
+            margin: 0 2rem 2rem;
+            cursor: pointer;
+            position: relative;
+            @extend %defaultTransition;
+
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+
+            &:before {
+                content: "";
+                display: block;
+                width: 0;
+                height: 3px;
+                background-color: $mainColor;
+                position: absolute;
+                bottom: -8px;
+                left: 0;
+                @extend %defaultTransition;
+            }
+
+            &.active:before {
+                width: 100%;
+            }
+        }
+    }
+
+    .portfolio-content {
+        position: relative !important;
+        .work {
+            @include maxExScreen {
+                padding: 0;
+            }
+
+            &-info {
+                position: relative;
+                margin-bottom: 1rem;
+                overflow: hidden;
+
+                &:hover {
+                    img {
+                        transform: scale(1.2);
+                        overflow: hidden;
+                    }
+
+                    .text {
+                        opacity: 1;
+                        @extend %scale-1;
+                    }
+                }
+
+                @include maxExScreen {
+                    width: 50%;
+                    margin: 1rem auto;
+                }
+
+                .text {
+                    @extend %overlay;
+                    background: rgba($mainColor, .7);
+                    color: $whiteColor;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size: 1.5rem;
+                    z-index: 2;
+                    transform: scaleY(.5);
+                    opacity: 0;
+                    @extend %defaultTransition;
+
+                }
+
+                img {
+                    @extend %defaultTransition;
+                    position: relative;
+                    z-index: 1;
+                    backface-visibility: hidden;
+                }
+
+                a {
+                    @extend %overlay;
+                    display: block;
+                    cursor: pointer;
+                    z-index: 3;
+                }
+            }
+        }
+    }
+}
+
+// statistics section
+.statistics {
+    @extend %default-padding;
+    background-image: linear-gradient(rgba($blackColor, .7)), url("../../../images/statistics/asset\ 56.jpeg");
+    background-size: cover;
+    color: $whiteColor;
+    font-size: 1.5rem;
+
+    .stat {
+        font-size: 6rem;
+        @extend %m-b-4;
+
+        h2 {
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    .contact {
+        border-top: 1px solid $grayColor;
+        margin-top: 5rem;
+        padding-top: 8rem;
+
+
+        p {
+            font-size: 4.5rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+    }
+}
+
+
+// team section
+.team {
+    @extend %alternative-padding;
+
+    .person {
+        @extend %m-b-4;
+
+        img {
+            border-bottom: 1px solid $lightGrayColor;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            font-weight: 900;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            color: $grayColor;
+        }
+    }
+}
+
+// pricing section
+.pricing {
+    background: $darkColor;
+    @extend %alternative-padding;
+    color: $whiteColor;
+
+
+    &-table {
+        border: 1px solid rgba($grayColor, .3);
+        padding: 4rem;
+        background-size: 115%;
+        @extend %defaultTransition;
+        @extend %m-b-4;
+
+        &.standard {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-style: solid;
+                border-width: 0 0 6.5rem 6.5rem;
+                border-color: transparent $mainColor;
+            }
+
+            .button {
+                background: $mainColor;
+                color: $whiteColor;
+
+            }
+
+            i {
+                position: absolute;
+                top: 1.2rem;
+                left: 1.3rem;
+                font-size: 1.5rem;
+            }
+        }
+
+        &:hover,
+        &.standard {
+            background-size: 100%;
+            border-color: $blackColor;
+            background-image: linear-gradient(rgba($blackColor, .9)), url("../../../images/pricing/asset\ 58.jpeg");
+        }
+
+        &.basic:hover {
+            background-image: linear-gradient(rgba($blackColor, .9)), url("../../../images/pricing/asset\ 57.jpeg");
+        }
+
+        &.business:hover {
+            background-image: linear-gradient(rgba($blackColor, .9)), url("../../../images/pricing/asset\ 59.jpeg");
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            margin: 0;
+        }
+
+        h3 {
+            font-size: 3.5rem;
+            margin: 0;
+
+            span {
+                font-size: 1.5rem;
+            }
+        }
+
+        .pricing-plan {
+            margin: 4rem 0;
+
+            li {
+                color: $lightGrayColor;
+                padding: .8rem 0;
+            }
+        }
+
+        .button {
+            background: none;
+            border: 2px solid $mainColor;
+            padding: 1rem 2.5rem;
+            @extend %defaultTransition;
+            color: $mainColor;
+
+            @include maxMdScreen {
+                font-size: 1.3rem;
+            }
+
+            &:hover {
+                background: $mainColor;
+                box-shadow: 0px 3px 10px $mainColor;
+                color: $whiteColor;
+            }
+        }
+    }
+}
+
+
+// blog section
+.blog {
+    @extend %alternative-padding;
+
+    .article {
+        @extend %m-b-4;
+
+        &-image {
+            max-width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        &-title {
+            font-size: 1.8rem;
+        }
+
+        &-link {
+            color: $darkColor;
+            @extend %defaultTransition;
+            font-size: 1.3rem;
+
+            i {
+                vertical-align: middle;
+                @extend %defaultTransition;
+            }
+
+            &:hover {
+                color: $mainColor;
+
+                i {
+                    padding: 0 .5rem;
+                }
+            }
+        }
+    }
+}
+
+// clients section
+.clients {
+    padding: 16rem 0 12rem;
+    background-image: linear-gradient(rgba($blackColor, .7)), url("../../../images/clients/asset\ 60.jpeg");
+    background-size: cover;
+
+    .client {
+        @extend %m-b-4;
+
+        img {
+            @extend %defaultTransition;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}
+
+// contact us section
+.contact-us {
+    @extend %default-padding;
+
+    form {
+        @extend %m-b-4;
+        .text-large {
+            margin-bottom: 2rem;
+        }
+    }
+
+
+    .map {
+        iframe {
+            width: 100%;
+            height: 44rem;
+            border: none;
+        }
+    }
+}

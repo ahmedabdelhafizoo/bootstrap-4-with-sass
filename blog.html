@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap 4 with sass</title>
+    <!-- bootstrap-reboot -->
+    <link rel="stylesheet" href="css/vendors/bootstrap-reboot.min.css">
+    <!-- bootstrap-grid -->
+    <link rel="stylesheet" href="css/vendors/bootstrap-grid.min.css">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,900" rel="stylesheet">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="css/vendors/animate.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="container">
+            <div class="row header-content align-items-center">
+                <div class="col-4">
+                    <img src="images/logo/asset0.png" alt="logo-image">
+                </div>
+                <nav class="col-lg-8 d-none d-lg-block nav">
+                    <ul class="nav-links list-unstyled d-flex justify-content-between flex-column flex-lg-row align-items-center">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="index.html#about">ABOUT</a></li>
+                        <li><a href="index.html#service">SERVICE</a></li>
+                        <li><a href="index.html#work">WORK</a></li>
+                        <li><a href="index.html#team">TEAM</a></li>
+                        <li><a href="index.html#pricing">PRICING</a></li>
+                        <li><a href="index.html#blog" class="active">BLOG</a></li>
+                        <li><a href="index.html#contact">CONTACT</a></li>
+                        <li><span class="d-none d-lg-block"><a href="#"><i class="fa fa-search"></i></a></span></li>
+                    </ul>
+                </nav>
+                <div class="search-icon col-8 d-lg-none d-flex justify-content-end align-items-center">
+                    <i class="fa fa-search fa-2x"></i>
+                    <div class="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- search box -->
+    <div class="search-box d-flex align-items-center justify-content-center">
+        <form id="search-box">
+            <div class="row justify-content-center">
+                <input type="text" name="search" placeholder="Search" class="col-6 col-sm-6 col-md-4 input">
+                <button type="submit" class="button"><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!-- main section -->
+    <section class="main-section d-flex align-items-center justify-content-center">
+        <h1 class="title">Blog Details</h1>
+    </section>
+
+    <!-- blog content -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="row animated">
+                <div class="col-md-8 article">
+                    <img src="images/blog-images/asset2.jpeg" alt="article-image">
+                    <h2 class="article-title">It uses a Dictionary of Over Lorem Latin words, combined To Lorem Ipsum
+                        no.</h2>
+                    <h4 class="article-author">By Mary Black | 10 March 2010</h4>
+                    <p class="text-large">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                        praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
+                        animi, id est laborum et dolorum fuga. Et harum quidem refacilis est et expedita distinctio.
+                        Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impediquo minus id quod
+                        maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                        Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
+                        voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a
+                        sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur.</p>
+                    <p class="text-large">
+                        On the other hand, we denounce with righteous indignation and dislike men who are so beguiled
+                        moralized by the charms of pleasure of the moment, so blinded by desire, that they cannot
+                        foresee the pain and trble that are bound to ensue; and equal blame belongs to those who fail
+                        in their duty through weakness of will, which is the same as saying through shrinking from toil
+                        and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our
+                        power of choice is untrammelled and when nothing prevents our being able</p>
+                    <p class="text-large dark-bg">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                        blanditiis praesenti luptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+                        sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
+                        animi,<span class="d-block"></span> id est laborum et dorum fuga. Et harum quidem refacilis est
+                        et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi cumque nihil
+                        impediquo minus id quod maxime</p>
+                    <div class="row article-info">
+                        <div class="col-lg-6">
+                            <img src="images/blog-images/asset3.jpeg" alt="article-image">
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="text-large">At vero eos et accusamus et iusto odio dignismos ducimus qui
+                                blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et qualestias
+                                excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
+                                deserunt motia animi, id est laborum et dolorum fuga.</p>
+                            <p class="text-large">Et harum quidem refacilis est et expedita distinctio. Nam libero
+                                tempore, cum soluta nobis est eligendi optio cumque nihil impediquoec</p>
+                        </div>
+                        <div class="col-12">
+                            <p class="text-large">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+                                molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+                                qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
+                                refacilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+                        </div>
+                        <div class="col-12 row justify-content-between">
+                            <div class="col-lg-6">
+                                <h2>Tags: <span class="text-normal">Classic, diary,experience,photo</span></h2>
+                            </div>
+                            <div class="col-lg-6 social-tags">
+                                <h2 class="d-inline">Tags:</h2>
+                                <ul class="social-icons list-unstyled d-inline">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="article-comments">
+                        <div class="comment d-flex admin">
+                            <div class="image col-4 col-sm-2">
+                                <img src="images/blog-images/asset4.png" alt="comment-image">
+                            </div>
+                            <div class="info col-8 col-sm-10">
+                                <h2 class="comment-owner">Nathan Bradley</h2>
+                                <h4 class="time">Administrator</h4>
+                                <p class="text-normal">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                    blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et tinctio.</p>
+                            </div>
+                        </div>
+                        <div class="heading">
+                            <h2 class="heading-text">COMMENTS</h2>
+                        </div>
+                        <div class="comment d-flex">
+                            <div class="image col-4 col-sm-2">
+                                <img src="images/blog-images/asset5.png" alt="comment-image">
+                            </div>
+                            <div class="info col-8 col-sm-10">
+                                <h2 class="comment-owner">Marilyn Cox</h2>
+                                <h4 class="time">17 JULY 2017, 6:05 PM</h4>
+                                <p class="text-normal">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                    blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et tinctio.</p>
+                            </div>
+                        </div>
+                        <div class="comment d-flex">
+                            <div class="image col-4 col-sm-2">
+                                <img src="images/blog-images/asset6.png" alt="comment-image">
+                            </div>
+                            <div class="info col-8 col-sm-10">
+                                <h2 class="comment-owner">Daniel Ellis</h2>
+                                <h4 class="time">17 JULY 2017, 6:05 PM</h4>
+                                <p class="text-normal">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                    blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et tinctio.</p>
+                            </div>
+                        </div>
+                        <div class="comment d-flex">
+                            <div class="image col-4 col-sm-2">
+                                <img src="images/blog-images/asset7.png" alt="comment-image">
+                            </div>
+                            <div class="info col-8 col-sm-10">
+                                <h2 class="comment-owner">Marilyn Cox</h2>
+                                <h4 class="time">17 JULY 2017, 6:05 PM</h4>
+                                <p class="text-normal">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                    blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et tinctio.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leave-comment">
+                        <div class="heading">
+                            <h2 class="heading-text">LEAVE A COMMENT</h2>
+                        </div>
+
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="text" name="name" class="input" placeholder="Your Name">
+
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="email" name="email" class="input" placeholder="Your Email">
+                                </div>
+                                <div class="col-lg-12">
+                                    <input type="url" name="website" class="input" placeholder="Website">
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" class="input" placeholder="Message"></textarea>
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="submit" value="post comment" class="button">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 sidbar align-self-start">
+                    <div class="search">
+                        <div class="heading">
+                            <h2 class="heading-text">SEARCH</h2>
+                        </div>
+                        <form class="d-flex">
+
+                            <input type="text" name="search" placeholder="Search" class=" input">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+
+                        </form>
+                    </div>
+                    <div class="categories">
+                        <div class="heading">
+                            <h2 class="heading-text">CATEGORIES</h2>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-normal">Development (1)</a></li>
+                            <li><a href="#" class="text-normal">Script Development (1)</a></li>
+                            <li><a href="#" class="text-normal">Music (2)</a></li>
+                            <li><a href="#" class="text-normal">News (2)</a></li>
+                            <li><a href="#" class="text-normal">Online Courses (9)</a></li>
+                            <li><a href="#" class="text-normal">HTML and CSS (9)</a></li>
+                            <li><a href="#" class="text-normal">Web Development (2)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="posts">
+                        <div class="heading">
+                            <h2 class="heading-text">LATEST POSTS</h2>
+                        </div>
+                        <div class="comment d-flex flex-wrap">
+                            <div class="image col-3 col-md-12 col-lg-4">
+                                <img src="images/blog-images/asset8.png" alt="comment-image">
+                            </div>
+                            <div class="info col-8 col-md-12 col-lg-8">
+                                <h2 class="comment-owner">It uses a Dictionary of over Lorem Ipsum.</h2>
+                                <h4 class="time">By Mary Black</h4>
+                            </div>
+                        </div>
+                        <div class="comment d-flex flex-wrap">
+                            <div class="image col-3 col-md-12 col-lg-4">
+                                <img src="images/blog-images/asset9.png" alt="comment-image">
+                            </div>
+                            <div class="info col-8 col-md-12 col-lg-8">
+                                <h2 class="comment-owner">It uses a Dictionary of over Lorem Ipsum.</h2>
+                                <h4 class="time">By Mary Black</h4>
+                            </div>
+                        </div>
+                        <div class="comment d-flex flex-wrap">
+                            <div class="image col-3 col-md-12 col-lg-4">
+                                <img src="images/blog-images/asset10.png" alt="comment-image">
+                            </div>
+                            <div class="info col-8 col-md-12 col-lg-8">
+                                <h2 class="comment-owner">It uses a Dictionary of over Lorem Ipsum.</h2>
+                                <h4 class="time">By Mary Black</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <div class="heading">
+                            <h2 class="heading-text">TAGS</h2>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-normal">New</a></li>
+                            <li><a href="#" class="text-normal">Wordpress</a></li>
+                            <li><a href="#" class="text-normal">Travel</a></li>
+                            <li><a href="#" class="text-normal">Design</a></li>
+                            <li><a href="#" class="text-normal">Client</a></li>
+                            <li><a href="#" class="text-normal">Travel</a></li>
+                            <li><a href="#" class="text-normal">Design</a></li>
+                            <li><a href="#" class="text-normal">New</a></li>
+                        </ul>
+                    </div>
+                    <div class="instagram">
+                        <div class="heading">
+                            <h2 class="heading-text">INSTAGRAM</h2>
+                        </div>
+                        <div class="images d-flex flex-wrap">
+                            <a href="#" class="col-4 col-sm-2 col-md-6 col-lg-4"><img src="images/blog-images/asset11.png"
+                                    alt="insta-image"></a>
+                            <a href="#" class="col-4 col-sm-2 col-md-6 col-lg-4"><img src="images/blog-images/asset12.png"
+                                    alt="insta-image"></a>
+                            <a href="#" class="col-4 col-sm-2 col-md-6 col-lg-4"><img src="images/blog-images/asset13.png"
+                                    alt="insta-image"></a>
+                            <a href="#" class="col-4 col-sm-2 col-md-6 col-lg-4"><img src="images/blog-images/asset14.png"
+                                    alt="insta-image"></a>
+                            <a href="#" class="col-4 col-sm-2 col-md-6 col-lg-4"><img src="images/blog-images/asset15.png"
+                                    alt="insta-image"></a>
+                            <a href="#" class="col-4 col-sm-2 col-md-6 col-lg-4"><img src="images/blog-images/asset16.png"
+                                    alt="insta-image"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer  -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="row animated">
+                <div class="col-md-4 info">
+                    <div class="content">
+                        <i class="fa fa-map-marker"></i>
+                        <h3>ADDRESS</h3>
+                        <p class="text-normal">17 Street Name here Office, </p>
+                        <p class="text-normal">80 Newlok US 8.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 info">
+                    <div class="content">
+                        <i class="fa fa-mobile"></i>
+                        <h3>PHONE NUMBER</h3>
+                        <p class="text-normal">+99 854 785 478 586</p>
+                        <p class="text-normal">102 458 658 587 548</p>
+                    </div>
+                </div>
+                <div class="col-md-4 info last">
+                    <div class="content">
+                        <i class="fa fa-envelope-o"></i>
+                        <h3>EMAIL</h3>
+                        <p class="text-normal">info@email.com </p>
+                        <p class="text-normal">company@email.com</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <ul class="social-icons list-unstyled">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+                    <p class="copyright">&copy; 2018 Proxa is Powered by Ahmed Abd Elhafiz</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- page loading -->
+    <div class="page-loading d-flex align-items-center justify-content-center">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+        </div>
+    </div>
+
+    <!-- jquery -->
+    <script src="js/vendors/jquery-3.1.1.min.js"></script>
+    <!-- main js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

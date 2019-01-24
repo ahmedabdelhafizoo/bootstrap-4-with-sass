@@ -1,0 +1,16 @@
+@import "sass/helpers/variables";
+
+@import "sass/helpers/mixins";
+// **********************globale style**********************
+@import "sass/pages/base";
+// **********************helpful classes**********************
+@import "sass/helpers/classes";
+// **********************components**********************
+@import "sass/components/buttons";
+@import "sass/components/inputs";
+// **********************header style**********************
+@import "sass/layout/header";
+// **********************blog page style**********************
+@import "sass/pages/blog";
+// **********************footer style**********************
+@import "sass/layout/footer";

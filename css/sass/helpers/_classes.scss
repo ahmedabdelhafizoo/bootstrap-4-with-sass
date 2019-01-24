@@ -1,0 +1,166 @@
+.list-unstyled {
+    margin: 0;
+    list-style: none;
+    padding: 0
+}
+.upper-text {
+    text-transform: uppercase;
+}
+.text {
+    &-normal, &-large {
+        font-family: 'Times New Roman', Times, serif;
+        color: $grayColor;
+    }
+    &-normal {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    &-large {
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
+}
+.text-center {
+    text-align: center;
+}
+
+.heading {
+    position: relative;
+    padding-bottom: .5rem;
+    text-align: center;
+    margin-bottom: 8rem;
+    
+    &-title {
+        color: $mainColor;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    &-text-white, &-text {
+        &::before, &::after {
+        content: "";
+        display: block;
+        width: 9rem;
+        height: .2rem;
+        background: $blackColor;
+        bottom: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &::after {
+        width: 4.5rem;
+        bottom: -.6rem;
+    }
+        font-size: 3rem;
+        font-weight: 900;
+        @include maxExScreen {
+            font-size: 2.5rem;
+        }
+    }
+    &-text {
+        color: $darkColor;
+        &::before, &::after {
+            background: $blackColor;
+        }
+    }
+    &-text-white {
+        color: $whiteColor;
+        &::before, &::after {
+            background: $whiteColor;
+        }
+    }
+}
+%overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+%defaultTransition {
+    transition: all .5s;
+}
+%scale-0 {
+    transform: scale(0);
+}
+%scale-1 {
+    transform: scale(1);
+}
+%m-b-4 {
+    margin-bottom: 4rem;
+}
+%default-padding {
+    padding: $defaultPadding;
+}
+%alternative-padding {
+    padding: $alternativePadding;
+}
+.social-icons {
+    li {
+        display: inline-block;
+        padding: 0 1rem;
+
+        a {
+            color: $darkColor;
+            font-size: 1.8rem;
+            @extend %defaultTransition;
+
+            &:hover {
+                color: $mainColor;
+            }
+        }
+    }
+}
+
+%after-image {
+    position: relative;
+        &:not(.last)::after {
+            content: "";
+            display: block;
+            background: url("../../../images/1.png") no-repeat;
+            width: 70%;
+            height: 6rem;
+            position: absolute;
+            left: 65%;
+            top: 0;
+            @include maxMdScreen {
+                display: none;
+            }
+        }
+
+        &:nth-of-type(2)::after {
+            transform: rotate(180deg);
+        }
+}
+// search box
+.search-box {
+    background: rgba($blackColor, .8);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    @extend %scale-0;
+    @extend %defaultTransition;
+
+    &.open {
+        @extend %scale-1;
+    }
+    cursor: url("../../../images/icon.png"), auto;
+
+    form {
+        width: 100%;
+        input {
+            margin: 0;
+        }
+        button {
+            border-radius: 0;
+        }
+    }
+}
+.article-author {
+    font-size: 1.3rem;
+    color: $grayColor;
+    margin: 1rem 0;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $lightGrayColor;
+}
